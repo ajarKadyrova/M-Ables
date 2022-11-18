@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.AccountFragment"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:id="@+id/account_header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/acc_image_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/acc_image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/acc_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/acc_image_iv"
+                        tools:text="Иванов Иван"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:id="@+id/acc_email_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/acc_name_tv"
+                        android:layout_toEndOf="@id/acc_image_iv"
+                        tools:text="ivanov.ivan@gmail.com"
+                        android:layout_marginStart="20dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <GridView
+                android:layout_below="@id/account_header_layout"
+                android:layout_marginTop="20dp"
+                android:id="@+id/grid_view_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="150dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="2"
+                tools:listitem="@layout/card_view_item_grid"
+                />
+
+            <Button
+                android:id="@+id/signOut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_rounded"
+                android:text="@string/sign_out"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+</layout>

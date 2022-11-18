@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010644550562",
+    "project_id": "m-ables",
+    "storage_bucket": "m-ables.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010644550562:android:7178a40595ddbf922e68fb",
+        "android_client_info": {
+          "package_name": "com.example.m_ables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010644550562-653kn6ig7ua1ct2967slncmus70r4ej1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLQe30aIDbATpoSP34hPKdE4xPXcpN7x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010644550562-653kn6ig7ua1ct2967slncmus70r4ej1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentsFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.m_ables.fragments.AuthFragment"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <argument
+            android:name="user_type"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_authFragment_to_studentInfoFragment"
+            app:destination="@id/studentInfoFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_studentsFragment"
+            app:destination="@id/studentsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.m_ables.fragments.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.m_ables.fragments.RegisterFragment"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+        <argument
+            android:name="user_type"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.m_ables.fragments.AccountFragment"
+        android:label="Аккаунт" >
+        <action
+            android:id="@+id/action_accountFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.example.m_ables.fragments.LessonsFragment"
+        android:label="Тест ABLLS-R"
+        tools:layout="@layout/fragment_lessons" >
+        <action
+            android:id="@+id/action_lessonsFragment_to_lessonFragment2"
+            app:destination="@id/lessonFragment2" />
+        <action
+            android:id="@+id/action_lessonsFragment_to_studentsFragment"
+            app:destination="@id/studentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.example.m_ables.fragments.StudentsFragment"
+        android:label="@string/students" >
+        <action
+            android:id="@+id/action_studentsFragment_to_studentInfoFragment"
+            app:destination="@id/studentInfoFragment" />
+        <action
+            android:id="@+id/action_studentsFragment_to_lessonFragment2"
+            app:destination="@id/lessonFragment2" />
+        <action
+            android:id="@+id/action_studentsFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTypeFragment"
+        android:name="com.example.m_ables.fragments.UserTypeFragment"
+        android:label="UserTypeFragment" >
+        <action
+            android:id="@+id/action_userTypeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonFragment2"
+        android:name="com.example.m_ables.fragments.LessonFragment2"
+        android:label="Тест ABLLS-R" >
+        <argument
+            android:name="test_letter_type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_lessonFragment2_to_lessonFragment3"
+            app:destination="@id/lessonFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentInfoFragment"
+        android:name="com.example.m_ables.fragments.StudentInfoFragment"
+        android:label="Ученик"
+        tools:layout="@layout/fragment_student_info" >
+        <argument
+            android:name="student_data"
+            app:argType="com.example.m_ables.Model.Student" />
+        <action
+            android:id="@+id/action_studentInfoFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+        <action
+            android:id="@+id/action_studentInfoFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonFragment3"
+        android:name="com.example.m_ables.fragments.LessonFragment3"
+        android:label="Глава А" />
+</navigation>
